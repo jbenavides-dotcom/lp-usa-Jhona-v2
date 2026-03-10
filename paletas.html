@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paletas de Color — La Palma & El Tucán Roasted Series</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: #F5F0E8;
+      color: #2C2D2E;
+      padding: 48px 24px;
+      min-height: 100vh;
+    }
+
+    .page-header {
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto 56px auto;
+    }
+
+    .page-header h1 {
+      font-family: 'Tenor Sans', serif;
+      font-size: clamp(22px, 3vw, 34px);
+      letter-spacing: 0.04em;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .page-header p {
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7a7069;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: #C9A227;
+      margin: 16px auto 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Palette Card */
+    .palette-card {
+      background: #ffffff;
+      border: 1px solid #e0d8cf;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .palette-header {
+      padding: 24px 28px 20px;
+      border-bottom: 1px solid #f0ece6;
+    }
+
+    .palette-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9a8f85;
+      margin-bottom: 6px;
+    }
+
+    .palette-name {
+      font-family: 'Tenor Sans', serif;
+      font-size: 20px;
+      letter-spacing: 0.02em;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+
+    .palette-desc {
+      font-size: 12px;
+      font-weight: 300;
+      color: #7a7069;
+      letter-spacing: 0.06em;
+    }
+
+    .palette-body {
+      padding: 24px 28px;
+    }
+
+    /* Swatches */
+    .swatches-section {
+      margin-bottom: 28px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #aaa09a;
+      margin-bottom: 14px;
+    }
+
+    .swatches {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .swatch-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .swatch-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      flex-shrink: 0;
+    }
+
+    .swatch-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: #7a7069;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .swatch-name {
+      font-size: 9px;
+      font-weight: 300;
+      color: #aaa09a;
+      text-align: center;
+    }
+
+    /* Mockups row */
+    .mockups-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* Product Card Mockup */
+    .mockup-product {
+      border-radius: 4px;
+      padding: 18px;
+      border: 1px solid #e8e2da;
+    }
+
+    .mockup-product .badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 2px;
+      margin-bottom: 10px;
+    }
+
+    .mockup-product .product-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 15px;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .mockup-product .product-process {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .mockup-product .product-price {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+    }
+
+    .mockup-product .buy-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 9px 0;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #fff;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    /* Hero Mockup */
+    .mockup-hero {
+      border-radius: 4px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 0;
+    }
+
+    .mockup-hero .hero-eyebrow {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .mockup-hero .hero-title {
+      font-family: 'Tenor Sans', serif;
+      font-size: 16px;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .mockup-hero .hero-sub {
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+      opacity: 0.75;
+    }
+
+    .mockup-hero .hero-btn {
+      display: inline-block;
+      padding: 9px 18px;
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
+    /* ===================== */
+    /* PALETTE A */
+    /* ===================== */
+    .pa-primary   { background: #6B4C5A; }
+    .pa-accent    { background: #C9A227; }
+    .pa-dark      { background: #1a1a1a; }
+    .pa-light     { background: #F5F0E8; border: 1px solid #e0d8cf; }
+    .pa-text      { background: #2C2D2E; }
+
+    .pa-product {
+      background: #F5F0E8;
+    }
+    .pa-product .badge        { background: #6B4C5A; }
+    .pa-product .product-title { color: #2C2D2E; }
+    .pa-product .product-process { color: #C9A227; }
+    .pa-product .product-price { color: #6B4C5A; }
+    .pa-product .buy-btn      { background: #6B4C5A; }
+
+    .pa-hero {
+      background: #1a1a1a;
+    }
+    .pa-hero .hero-eyebrow { color: #C9A227; }
+    .pa-hero .hero-title   { color: #F5F0E8; }
+    .pa-hero .hero-sub     { color: #F5F0E8; }
+    .pa-hero .hero-btn     { background: #6B4C5A; color: #fff; }
+
+    /* ===================== */
+    /* PALETTE B */
+    /* ===================== */
+    .pb-primary   { background: #B87D82; }
+    .pb-accent    { background: #C9A227; }
+    .pb-dark      { background: #3D2B2E; }
+    .pb-light     { background: #F5F0E8; border: 1px solid #e0d8cf; }
+    .pb-text      { background: #2C2D2E; }
+
+    .pb-product {
+      background: #F5F0E8;
+    }
+    .pb-product .badge        { background: #B87D82; }
+    .pb-product .product-title { color: #2C2D2E; }
+    .pb-product .product-process { color: #C9A227; }
+    .pb-product .product-price { color: #B87D82; }
+    .pb-product .buy-btn      { background: #B87D82; }
+
+    .pb-hero {
+      background: #3D2B2E;
+    }
+    .pb-hero .hero-eyebrow { color: #C9A227; }
+    .pb-hero .hero-title   { color: #F5F0E8; }
+    .pb-hero .hero-sub     { color: #F5F0E8; }
+    .pb-hero .hero-btn     { background: #B87D82; color: #fff; }
+
+    /* ===================== */
+    /* PALETTE C */
+    /* ===================== */
+    .pc-primary   { background: #8B5E6B; }
+    .pc-accent    { background: #B8960B; }
+    .pc-dark      { background: #1a1a1a; }
+    .pc-light     { background: #FAF7F2; border: 1px solid #e0d8cf; }
+    .pc-text      { background: #1a1a1a; }
+
+    .pc-product {
+      background: #FAF7F2;
+    }
+    .pc-product .badge        { background: #8B5E6B; }
+    .pc-product .product-title { color: #1a1a1a; }
+    .pc-product .product-process { color: #B8960B; }
+    .pc-product .product-price { color: #8B5E6B; }
+    .pc-product .buy-btn      { background: #8B5E6B; }
+
+    .pc-hero {
+      background: #1a1a1a;
+    }
+    .pc-hero .hero-eyebrow { color: #B8960B; }
+    .pc-hero .hero-title   { color: #FAF7F2; }
+    .pc-hero .hero-sub     { color: #FAF7F2; }
+    .pc-hero .hero-btn     { background: #8B5E6B; color: #fff; }
+
+    /* ===================== */
+    /* PALETTE D */
+    /* ===================== */
+    .pd-primary   { background: #9B7A6E; }
+    .pd-accent    { background: #C9A227; }
+    .pd-dark      { background: #2C2322; }
+    .pd-light     { background: #F5F0E8; border: 1px solid #e0d8cf; }
+    .pd-text      { background: #2C2322; }
+
+    .pd-product {
+      background: #F5F0E8;
+    }
+    .pd-product .badge        { background: #9B7A6E; }
+    .pd-product .product-title { color: #2C2322; }
+    .pd-product .product-process { color: #C9A227; }
+    .pd-product .product-price { color: #9B7A6E; }
+    .pd-product .buy-btn      { background: #9B7A6E; }
+
+    .pd-hero {
+      background: #2C2322;
+    }
+    .pd-hero .hero-eyebrow { color: #C9A227; }
+    .pd-hero .hero-title   { color: #F5F0E8; }
+    .pd-hero .hero-sub     { color: #F5F0E8; }
+    .pd-hero .hero-btn     { background: #9B7A6E; color: #fff; }
+
+    /* Footer note */
+    .page-footer {
+      text-align: center;
+      max-width: 1200px;
+      margin: 48px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid #e0d8cf;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.10em;
+      color: #9a8f85;
+    }
+
+    @media (max-width: 860px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .mockups-row {
+        grid-template-columns: 1fr;
+      }
+      .swatches {
+        gap: 10px;
+      }
+      .swatch-circle {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <p class="palette-label">La Palma &amp; El Tucán · Roasted Series</p>
+    <h1>Paletas de Color</h1>
+    <p>Basadas en los colores reales de los empaques</p>
+    <div class="divider"></div>
+  </header>
+
+  <main class="grid">
+
+    <!-- ==================== PALETTE A ==================== -->
+    <div class="palette-card">
+      <div class="palette-header">
+        <div class="palette-label">Paleta A</div>
+        <div class="palette-name">Burgundy &amp; Gold</div>
+        <div class="palette-desc">Del empaque Geisha + Legendary — elegante y profundo</div>
+      </div>
+      <div class="palette-body">
+
+        <div class="swatches-section">
+          <div class="section-label">Colores</div>
+          <div class="swatches">
+            <div class="swatch-item">
+              <div class="swatch-circle pa-primary"></div>
+              <div class="swatch-label">#6B4C5A</div>
+              <div class="swatch-name">Primary</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pa-accent"></div>
+              <div class="swatch-label">#C9A227</div>
+              <div class="swatch-name">Accent</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pa-dark"></div>
+              <div class="swatch-label">#1A1A1A</div>
+              <div class="swatch-name">Dark</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pa-light"></div>
+              <div class="swatch-label">#F5F0E8</div>
+              <div class="swatch-name">Light</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pa-text"></div>
+              <div class="swatch-label">#2C2D2E</div>
+              <div class="swatch-name">Text</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockups-row">
+          <div>
+            <div class="section-label">Product Card</div>
+            <div class="mockup-product pa-product">
+              <span class="badge">SCA 89</span>
+              <div class="product-title">Geisha<br>Natural</div>
+              <div class="product-process">Honey Process · 1,700m</div>
+              <div class="product-price">$38 USD</div>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+          <div>
+            <div class="section-label">Hero Preview</div>
+            <div class="mockup-hero pa-hero">
+              <div>
+                <div class="hero-eyebrow">Roasted Series</div>
+                <div class="hero-title">Specialty<br>Coffee</div>
+                <div class="hero-sub">Colombia · Direct Trade · SCA 89+</div>
+              </div>
+              <button class="hero-btn">Explore Coffees</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PALETTE B ==================== -->
+    <div class="palette-card">
+      <div class="palette-header">
+        <div class="palette-label">Paleta B</div>
+        <div class="palette-name">Dusty Rose &amp; Cream</div>
+        <div class="palette-desc">Del empaque Tucán + Palma Blend — suave y sofisticado</div>
+      </div>
+      <div class="palette-body">
+
+        <div class="swatches-section">
+          <div class="section-label">Colores</div>
+          <div class="swatches">
+            <div class="swatch-item">
+              <div class="swatch-circle pb-primary"></div>
+              <div class="swatch-label">#B87D82</div>
+              <div class="swatch-name">Primary</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pb-accent"></div>
+              <div class="swatch-label">#C9A227</div>
+              <div class="swatch-name">Accent</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pb-dark"></div>
+              <div class="swatch-label">#3D2B2E</div>
+              <div class="swatch-name">Dark</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pb-light"></div>
+              <div class="swatch-label">#F5F0E8</div>
+              <div class="swatch-name">Light</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pb-text"></div>
+              <div class="swatch-label">#2C2D2E</div>
+              <div class="swatch-name">Text</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockups-row">
+          <div>
+            <div class="section-label">Product Card</div>
+            <div class="mockup-product pb-product">
+              <span class="badge">SCA 89</span>
+              <div class="product-title">Tucán<br>Blend</div>
+              <div class="product-process">Honey Process · 1,700m</div>
+              <div class="product-price">$38 USD</div>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+          <div>
+            <div class="section-label">Hero Preview</div>
+            <div class="mockup-hero pb-hero">
+              <div>
+                <div class="hero-eyebrow">Roasted Series</div>
+                <div class="hero-title">Specialty<br>Coffee</div>
+                <div class="hero-sub">Colombia · Direct Trade · SCA 89+</div>
+              </div>
+              <button class="hero-btn">Explore Coffees</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PALETTE C ==================== -->
+    <div class="palette-card">
+      <div class="palette-header">
+        <div class="palette-label">Paleta C</div>
+        <div class="palette-name">Dark Mauve &amp; Gold</div>
+        <div class="palette-desc">Dramatic, Legendary-forward — contraste máximo, presencia fuerte</div>
+      </div>
+      <div class="palette-body">
+
+        <div class="swatches-section">
+          <div class="section-label">Colores</div>
+          <div class="swatches">
+            <div class="swatch-item">
+              <div class="swatch-circle pc-primary"></div>
+              <div class="swatch-label">#8B5E6B</div>
+              <div class="swatch-name">Primary</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pc-accent"></div>
+              <div class="swatch-label">#B8960B</div>
+              <div class="swatch-name">Accent</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pc-dark"></div>
+              <div class="swatch-label">#1A1A1A</div>
+              <div class="swatch-name">Dark</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pc-light"></div>
+              <div class="swatch-label">#FAF7F2</div>
+              <div class="swatch-name">Light</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pc-text"></div>
+              <div class="swatch-label">#1A1A1A</div>
+              <div class="swatch-name">Text</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockups-row">
+          <div>
+            <div class="section-label">Product Card</div>
+            <div class="mockup-product pc-product">
+              <span class="badge">SCA 89</span>
+              <div class="product-title">Sidra<br>Washed</div>
+              <div class="product-process">Honey Process · 1,700m</div>
+              <div class="product-price">$38 USD</div>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+          <div>
+            <div class="section-label">Hero Preview</div>
+            <div class="mockup-hero pc-hero">
+              <div>
+                <div class="hero-eyebrow">Roasted Series</div>
+                <div class="hero-title">Specialty<br>Coffee</div>
+                <div class="hero-sub">Colombia · Direct Trade · SCA 89+</div>
+              </div>
+              <button class="hero-btn">Explore Coffees</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PALETTE D ==================== -->
+    <div class="palette-card">
+      <div class="palette-header">
+        <div class="palette-label">Paleta D</div>
+        <div class="palette-name">Warm Neutrals</div>
+        <div class="palette-desc">Minimalista y cálido — tono tierra del fondo de los empaques</div>
+      </div>
+      <div class="palette-body">
+
+        <div class="swatches-section">
+          <div class="section-label">Colores</div>
+          <div class="swatches">
+            <div class="swatch-item">
+              <div class="swatch-circle pd-primary"></div>
+              <div class="swatch-label">#9B7A6E</div>
+              <div class="swatch-name">Primary</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pd-accent"></div>
+              <div class="swatch-label">#C9A227</div>
+              <div class="swatch-name">Accent</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pd-dark"></div>
+              <div class="swatch-label">#2C2322</div>
+              <div class="swatch-name">Dark</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pd-light"></div>
+              <div class="swatch-label">#F5F0E8</div>
+              <div class="swatch-name">Light</div>
+            </div>
+            <div class="swatch-item">
+              <div class="swatch-circle pd-text"></div>
+              <div class="swatch-label">#2C2322</div>
+              <div class="swatch-name">Text</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockups-row">
+          <div>
+            <div class="section-label">Product Card</div>
+            <div class="mockup-product pd-product">
+              <span class="badge">SCA 89</span>
+              <div class="product-title">Palma<br>Blend</div>
+              <div class="product-process">Honey Process · 1,700m</div>
+              <div class="product-price">$38 USD</div>
+              <button class="buy-btn">Buy Now</button>
+            </div>
+          </div>
+          <div>
+            <div class="section-label">Hero Preview</div>
+            <div class="mockup-hero pd-hero">
+              <div>
+                <div class="hero-eyebrow">Roasted Series</div>
+                <div class="hero-title">Specialty<br>Coffee</div>
+                <div class="hero-sub">Colombia · Direct Trade · SCA 89+</div>
+              </div>
+              <button class="hero-btn">Explore Coffees</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="page-footer">
+    La Palma &amp; El Tucán · Roasted Series · Paletas derivadas de los empaques reales del producto
+  </footer>
+
+</body>
+</html>

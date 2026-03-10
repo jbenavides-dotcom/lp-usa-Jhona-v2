@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-warm-white text-dark font-body antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-rose text-white uppercase tracking-wider font-semibold px-8 py-3 transition-colors duration-200 hover:bg-rose-dark;
+  }
+
+  .btn-secondary {
+    @apply border border-rose text-rose uppercase tracking-wider font-semibold px-8 py-3 transition-colors duration-200 hover:bg-rose hover:text-white;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-dark;
+  }
+
+  .section-subtitle {
+    @apply text-rose uppercase tracking-[0.3em] text-sm font-semibold;
+  }
+}
