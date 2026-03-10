@@ -6,6 +6,7 @@ export default {
       colors: {
         rose: '#E11D48',
         'rose-dark': '#BE123C',
+        burgundy: '#5C3A3A',
         dark: '#1a1a1a',
         cream: '#FAFAF9',
         gold: '#92764A',

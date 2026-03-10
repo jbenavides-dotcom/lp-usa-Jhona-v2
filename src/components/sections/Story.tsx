@@ -71,7 +71,7 @@ export function Story() {
 
               {/* Location badge */}
               <div className="flex items-center gap-2 mt-6">
-                <MapPin size={18} className="text-rose shrink-0" />
+                <MapPin size={18} className="text-burgundy shrink-0" />
                 <span className="text-gray-500 font-body text-sm">
                   Zipacón, Cundinamarca, Colombia · 1,700 m.a.s.l.
                 </span>
@@ -81,7 +81,7 @@ export function Story() {
               <div className="grid grid-cols-3 gap-6 mt-8">
                 {stats.map(({ value, label }) => (
                   <div key={label} className="text-center">
-                    <p className="font-display text-3xl font-bold text-rose">{value}</p>
+                    <p className="font-display text-3xl font-bold text-burgundy">{value}</p>
                     <p className="text-gold font-body text-sm uppercase tracking-wider mt-1">
                       {label}
                     </p>

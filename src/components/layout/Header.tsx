@@ -30,7 +30,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const textClass = isScrolled ? 'text-dark' : 'text-white';
-  const hoverClass = isScrolled ? 'hover:text-rose' : 'hover:text-rose/80';
+  const hoverClass = isScrolled ? 'hover:text-burgundy' : 'hover:text-burgundy/80';
 
   return (
     <header
@@ -103,7 +103,7 @@ export function Header() {
                   handleAnchorClick(e, link.href);
                   setMobileOpen(false);
                 }}
-                className="text-dark text-sm font-semibold uppercase tracking-wide py-3 border-b border-gray-100 hover:text-rose transition-colors"
+                className="text-dark text-sm font-semibold uppercase tracking-wide py-3 border-b border-gray-100 hover:text-burgundy transition-colors"
               >
                 {link.label}
               </a>

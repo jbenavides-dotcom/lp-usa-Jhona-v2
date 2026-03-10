@@ -25,7 +25,7 @@ export function TrustBar() {
                 {Icon && (
                   <Icon
                     size={20}
-                    className="text-green flex-shrink-0"
+                    className="text-burgundy flex-shrink-0"
                   />
                 )}
                 <span className="font-body font-semibold text-sm text-dark leading-tight">

@@ -36,7 +36,7 @@ export function Process() {
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                   {/* Step number badge */}
-                  <div className="absolute top-3 left-3 w-10 h-10 bg-rose text-white rounded-full flex items-center justify-center font-bold font-body text-sm">
+                  <div className="absolute top-3 left-3 w-10 h-10 bg-burgundy text-white rounded-full flex items-center justify-center font-bold font-body text-sm">
                     {step.step}
                   </div>
                 </div>

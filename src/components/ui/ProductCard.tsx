@@ -31,7 +31,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
         {/* Badge — top left */}
         {product.badge && (
-          <span className="absolute top-3 left-3 bg-rose text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-sm">
+          <span className="absolute top-3 left-3 bg-burgundy text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-sm">
             {product.badge}
           </span>
         )}
@@ -44,7 +44,7 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* SCA Score — bottom left */}
         <span className="absolute bottom-3 left-3 bg-white border border-gray-200 text-[11px] font-bold px-2 py-1 rounded-sm">
           SCA{' '}
-          <span className="text-rose">{product.scaScore}</span>
+          <span className="text-burgundy">{product.scaScore}</span>
         </span>
       </div>
 
@@ -65,7 +65,7 @@ export function ProductCard({ product }: ProductCardProps) {
               ${product.comparePrice}
             </span>
           )}
-          <span className="text-rose text-xl font-bold">${product.price}</span>
+          <span className="text-burgundy text-xl font-bold">${product.price}</span>
         </div>
 
         {/* Process + altitude */}

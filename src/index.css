@@ -26,6 +26,6 @@
   }
 
   .section-subtitle {
-    @apply text-rose uppercase tracking-[0.3em] text-sm font-semibold;
+    @apply text-burgundy uppercase tracking-[0.3em] text-sm font-semibold;
   }
 }
