@@ -1,4 +1,4 @@
-import { Truck, Clock, Zap, MapPin, Package, Shield } from 'lucide-react';
+import { Truck, Clock, Zap, MapPin, Package } from 'lucide-react';
 import { SHIPPING } from '../../constants/config';
 import { ScrollReveal } from '../ui/ScrollReveal';
 

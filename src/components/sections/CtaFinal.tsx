@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Copy, Shield, Truck, Clock } from 'lucide-react';
+import { Copy, Truck, Clock } from 'lucide-react';
 import { SHOPIFY_COLLECTIONS, DISCOUNT_URL } from '../../constants/config';
 import { ScrollReveal } from '../ui/ScrollReveal';
 

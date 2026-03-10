@@ -2,8 +2,6 @@ import { PRODUCTS, TIERS } from '../../constants/products';
 import { ScrollReveal } from '../ui/ScrollReveal';
 import { ProductCard } from '../ui/ProductCard';
 
-const BASE = import.meta.env.BASE_URL;
-
 export function Products() {
   return (
     <section id="products" className="bg-white py-20">
