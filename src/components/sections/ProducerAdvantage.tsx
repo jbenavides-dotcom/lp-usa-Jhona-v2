@@ -87,8 +87,8 @@ export function ProducerAdvantage() {
                 className="rounded-lg h-40 object-cover w-full"
               />
               <img
-                src={`${BASE}images/tostadora/stronghold_s8x_lateral.jpg`}
-                alt="Stronghold S8X roaster lateral view"
+                src={`${BASE}images/proceso/proceso_03_cereza_madura.jpg`}
+                alt="Ripe coffee cherries at La Palma & El Tucán"
                 className="rounded-lg h-40 object-cover w-full"
               />
             </div>
