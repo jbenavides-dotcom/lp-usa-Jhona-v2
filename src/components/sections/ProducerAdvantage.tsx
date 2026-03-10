@@ -76,7 +76,7 @@ export function ProducerAdvantage() {
             <img
               src={`${BASE}images/tostadora/stronghold_s8x_frontal_clean.jpg`}
               alt="Stronghold S8X roaster at La Palma & El Tucán"
-              className="rounded-xl w-full shadow-lg object-contain bg-gray-100"
+              className="rounded-xl w-full shadow-lg object-cover h-96"
             />
 
             {/* Two smaller images below */}
