@@ -23,7 +23,7 @@ export function ProducerAdvantage() {
 
           {/* LEFT — content */}
           <ScrollReveal delay={0}>
-            <p className="text-gold uppercase tracking-[0.3em] text-sm font-semibold">
+            <p className="text-white uppercase tracking-[0.3em] text-sm font-semibold">
               THE PRODUCER ADVANTAGE
             </p>
 
@@ -62,7 +62,7 @@ export function ProducerAdvantage() {
               {stats.map(({ value, label }) => (
                 <div key={label}>
                   <p className="font-display text-3xl font-bold text-burgundy">{value}</p>
-                  <p className="text-gold font-body text-sm uppercase tracking-wider mt-0.5">
+                  <p className="text-white/80 font-body text-sm uppercase tracking-wider mt-0.5">
                     {label}
                   </p>
                 </div>

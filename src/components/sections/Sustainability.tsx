@@ -53,7 +53,7 @@ export function Sustainability() {
                   return (
                     <div key={stat.label} className="flex flex-col gap-3">
                       <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                        <Icon size={22} className="text-gold" />
+                        <Icon size={22} className="text-white" />
                       </div>
                       <p className="font-display text-2xl font-bold text-white">{stat.value}</p>
                       <p className="text-cream/60 font-body text-sm leading-snug">{stat.label}</p>

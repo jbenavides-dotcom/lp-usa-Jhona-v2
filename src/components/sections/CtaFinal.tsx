@@ -33,7 +33,7 @@ export function CtaFinal() {
       <div className="relative max-w-4xl mx-auto px-6 text-center">
         <ScrollReveal>
           {/* Eyebrow */}
-          <p className="text-gold uppercase tracking-[0.3em] text-sm font-body">
+          <p className="text-white uppercase tracking-[0.3em] text-sm font-body">
             READY TO TASTE THE DIFFERENCE?
           </p>
 
