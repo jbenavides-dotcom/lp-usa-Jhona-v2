@@ -51,7 +51,7 @@ export function ProducerAdvantage() {
             <div className="grid grid-cols-2 gap-4 mt-8">
               {advantages.map(({ number, title }) => (
                 <div key={number} className="bg-white/10 rounded-lg p-4">
-                  <p className="text-burgundy font-bold text-2xl font-display">{number}</p>
+                  <p className="text-white font-bold text-2xl font-display">{number}</p>
                   <p className="text-white font-semibold text-sm mt-1 font-body">{title}</p>
                 </div>
               ))}
@@ -61,7 +61,7 @@ export function ProducerAdvantage() {
             <div className="flex gap-8 mt-8">
               {stats.map(({ value, label }) => (
                 <div key={label}>
-                  <p className="font-display text-3xl font-bold text-burgundy">{value}</p>
+                  <p className="font-display text-3xl font-bold text-white">{value}</p>
                   <p className="text-white/80 font-body text-sm uppercase tracking-wider mt-0.5">
                     {label}
                   </p>

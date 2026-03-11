@@ -53,7 +53,7 @@ export function CtaFinal() {
 
           {/* Discount code box */}
           <div className="mt-8 inline-flex items-center bg-white/10 backdrop-blur border border-white/20 rounded-lg px-6 py-3">
-            <span className="font-mono text-2xl font-bold text-rose tracking-wider">
+            <span className="font-mono text-2xl font-bold text-white tracking-wider">
               WELCOME10
             </span>
             <button
