@@ -11,7 +11,7 @@ const ICON_MAP: Record<string, ComponentType<{ size?: number; className?: string
 
 export function TrustBar() {
   return (
-    <section className="bg-white border-y border-gray-100 py-4">
+    <section className="bg-cream border-y border-gray-200/50 py-4">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Badge grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

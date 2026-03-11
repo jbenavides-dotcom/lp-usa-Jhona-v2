@@ -5,7 +5,7 @@ const BASE = import.meta.env.BASE_URL;
 
 export function Process() {
   return (
-    <section id="process" className="bg-gray-50 py-20">
+    <section id="process" className="bg-cream/70 py-20">
       <div className="container mx-auto max-w-7xl px-4">
         {/* Header */}
         <div className="text-center mb-14">

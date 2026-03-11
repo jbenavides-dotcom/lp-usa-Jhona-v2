@@ -86,8 +86,8 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Stock warning */}
         {showStockWarning && (
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse flex-shrink-0" />
-            <span className="text-red-600 text-xs font-semibold">
+            <span className="w-2 h-2 rounded-full bg-burgundy animate-pulse flex-shrink-0" />
+            <span className="text-burgundy text-xs font-semibold">
               Only {product.stock} bags left
             </span>
           </div>

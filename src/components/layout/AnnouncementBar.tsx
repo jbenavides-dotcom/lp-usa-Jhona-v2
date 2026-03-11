@@ -8,7 +8,7 @@ export function AnnouncementBar() {
   if (dismissed) return null;
 
   return (
-    <div className="bg-rose text-white relative z-50">
+    <div className="bg-burgundy text-white relative z-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Desktop layout */}
         <div className="hidden sm:flex items-center justify-between h-10">
