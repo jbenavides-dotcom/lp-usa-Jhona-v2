@@ -17,7 +17,7 @@ const stats = [
 
 export function ProducerAdvantage() {
   return (
-    <section id="producer" className="bg-burgundy py-20 text-white">
+    <section id="producer" className="bg-dark py-20 text-white">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
