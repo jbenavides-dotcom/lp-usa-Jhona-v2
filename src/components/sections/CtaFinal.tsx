@@ -16,10 +16,10 @@ export function CtaFinal() {
   }
 
   return (
-    <section className="relative bg-dark py-20 text-white overflow-hidden">
+    <section className="relative bg-burgundy py-20 text-white overflow-hidden">
       {/* Subtle background texture */}
       <div
-        className="absolute inset-0 bg-black/80"
+        className="absolute inset-0 bg-burgundy/80"
         style={{
           backgroundImage: `url(${BASE}images/banners/lineup-detail.jpg)`,
           backgroundSize: 'cover',

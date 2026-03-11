@@ -14,7 +14,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
 
 export function Sustainability() {
   return (
-    <section id="sustainability" className="bg-dark py-20 text-white">
+    <section id="sustainability" className="bg-burgundy py-20 text-white">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left column — content */}
