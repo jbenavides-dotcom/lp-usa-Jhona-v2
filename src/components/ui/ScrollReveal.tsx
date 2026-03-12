@@ -12,21 +12,31 @@ export function ScrollReveal({ children, className = '', delay = 0 }: ScrollReve
 
   useEffect(() => {
     const element = ref.current;
-    if (!element) return;
+    if (!element) {
+      setIsVisible(true);
+      return;
+    }
+
+    // Safety: force visible after timeout to prevent invisible text
+    const timeout = setTimeout(() => setIsVisible(true), 1200 + delay);
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
           observer.unobserve(element);
+          clearTimeout(timeout);
         }
       },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0, rootMargin: '0px 0px 0px 0px' }
     );
 
     observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeout);
+    };
+  }, [delay]);
 
   return (
     <div
@@ -34,8 +44,8 @@ export function ScrollReveal({ children, className = '', delay = 0 }: ScrollReve
       className={className}
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-        transition: `opacity 0.6s ease ${delay}ms, transform 0.6s ease ${delay}ms`,
+        transform: isVisible ? 'translateY(0)' : 'translateY(12px)',
+        transition: `opacity 0.5s ease ${delay}ms, transform 0.5s ease ${delay}ms`,
       }}
     >
       {children}

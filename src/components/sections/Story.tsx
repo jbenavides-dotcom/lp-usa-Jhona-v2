@@ -12,15 +12,15 @@ const stats = [
 
 export function Story() {
   return (
-    <section id="story" className="bg-white py-20">
+    <section id="story" className="bg-beige-natural py-20">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left column — image */}
           <ScrollReveal delay={0}>
             <div className="relative rounded-xl overflow-hidden">
               <img
-                src={`${BASE}images/equipo/fundadores_felipe_elisa.jpg`}
-                alt="Felipe Sardi and Elisa María Madriñán, founders of La Palma & El Tucán"
+                src={`${BASE}images/sostenibilidad/finca_vista_panoramica.jpg`}
+                alt="Panoramic view of La Palma & El Tucán coffee farm in Zipacón, Colombia's cloud forest"
                 loading="lazy"
                 width="600"
                 height="400"
@@ -42,21 +42,21 @@ export function Story() {
           <ScrollReveal delay={150}>
             <div>
               <p className="section-subtitle mb-3">OUR STORY</p>
-              <h2 className="section-title font-display">A Farm, A Family, A Vision</h2>
+              <h2 className="section-title font-display">A Farm, A Legacy, A Vision</h2>
 
-              <p className="text-gray-600 font-body leading-relaxed mt-6">
+              <p className="text-dark font-body leading-relaxed mt-6">
                 In 2012, Felipe Sardi and Elisa María Madriñán set out to create something
                 unprecedented in Colombian coffee: a farm where every step—from seed to roast—happens
                 in one place.
               </p>
 
-              <p className="text-gray-600 font-body leading-relaxed mt-4">
+              <p className="text-dark font-body leading-relaxed mt-4">
                 Today, La Palma &amp; El Tucán is home to rare varietals like Geisha, Sidra, and
                 Mokka, processed with innovative methods like Lactic fermentation and Bio-Innovation.
                 In 2019, our Sidra varietal helped win the World Barista Championship.
               </p>
 
-              <p className="text-gray-600 font-body leading-relaxed mt-4">
+              <p className="text-dark font-body leading-relaxed mt-4">
                 Today, the farm is home to over 27 species of plants per hectare in a polyculture
                 system — a radical departure from the monoculture that dominates Colombian coffee
                 production. Our commitment to 100% organic and agroecological practices means zero
@@ -64,7 +64,7 @@ export function Story() {
                 that captures more carbon than it produces.
               </p>
 
-              <p className="text-gray-600 font-body leading-relaxed mt-4">
+              <p className="text-dark font-body leading-relaxed mt-4">
                 The farm's name honors two rare species that coexist on the property: the endangered
                 Palma de Cera — Colombia's national tree — and the Emerald Toucan, a striking bird
                 native to these cloud forests. This concept of symbiosis guides everything we do, from
@@ -75,7 +75,7 @@ export function Story() {
               {/* Location badge */}
               <div className="flex items-center gap-2 mt-6">
                 <MapPin size={18} className="text-burgundy shrink-0" />
-                <span className="text-gray-500 font-body text-sm">
+                <span className="text-dark font-body text-sm">
                   Zipacón, Cundinamarca, Colombia · 1,700 m.a.s.l.
                 </span>
               </div>
@@ -95,8 +95,8 @@ export function Story() {
               {/* Photo gallery */}
               <div className="grid grid-cols-3 gap-3 mt-8">
                 <img
-                  src={`${BASE}images/equipo/equipo_elisa_trabajadoras.jpg`}
-                  alt="Elisa Madriñán with coffee workers sorting beans at La Palma & El Tucán farm in Zipacón, Colombia"
+                  src={`${BASE}images/equipo/equipo_felipe_beneficio.jpg`}
+                  alt="Felipe Sardi at the coffee processing station at La Palma & El Tucán"
                   loading="lazy"
                   width="200"
                   height="128"
@@ -111,8 +111,8 @@ export function Story() {
                   className="rounded-lg h-32 w-full object-cover"
                 />
                 <img
-                  src={`${BASE}images/equipo/fundadores_familia.jpg`}
-                  alt="Felipe Sardi and Elisa Madriñán with their family at the La Palma & El Tucán coffee farm"
+                  src={`${BASE}images/proceso/proceso_03_cereza_madura.jpg`}
+                  alt="Ripe coffee cherries ready for harvest at La Palma & El Tucán"
                   loading="lazy"
                   width="200"
                   height="128"

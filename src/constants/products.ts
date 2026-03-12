@@ -72,7 +72,7 @@ export const PRODUCTS: Product[] = [
     badge: null,
     tag: 'SINGLE ORIGIN',
     shopifyUrl: 'https://lapalmayeltucan.com/collections/all',
-    image: 'images/productos/geisha-bag.png',
+    image: '/images/productos/geisha-bag.png',
     labelImage: null,
   },
   {

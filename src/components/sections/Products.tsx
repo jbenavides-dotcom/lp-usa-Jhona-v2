@@ -4,7 +4,7 @@ import { ProductCard } from '../ui/ProductCard';
 
 export function Products() {
   return (
-    <section id="products" className="bg-cream py-20">
+    <section id="products" className="bg-rosa-empaque py-20">
       <div className="container mx-auto max-w-7xl px-4">
 
         {/* Section header */}

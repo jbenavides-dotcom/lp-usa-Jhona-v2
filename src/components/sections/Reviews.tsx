@@ -5,24 +5,24 @@ import { ScrollReveal } from '../ui/ScrollReveal';
 
 export function Reviews() {
   return (
-    <section className="bg-cream py-20">
+    <section className="bg-burgundy py-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center">
-          <p className="section-subtitle">CUSTOMER REVIEWS</p>
-          <h2 className="section-title font-display mt-3">What Coffee Lovers Say</h2>
+          <p className="text-white/80 uppercase tracking-[0.3em] text-sm font-body font-semibold">CUSTOMER REVIEWS</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white font-display mt-3">What Coffee Lovers Say</h2>
 
           {/* Aggregate rating */}
           <div className="flex items-center justify-center gap-3 mt-4">
             <div className="flex items-center gap-0.5">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                <Star key={i} className="w-6 h-6 fill-gold text-gold" />
               ))}
             </div>
-            <span className="font-display text-3xl font-bold text-dark">
+            <span className="font-display text-3xl font-bold text-white">
               {SOCIAL_PROOF.rating}
             </span>
-            <span className="text-gray-500">({SOCIAL_PROOF.totalReviews} reviews)</span>
+            <span className="text-white/70">({SOCIAL_PROOF.totalReviews} reviews)</span>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export function Reviews() {
               {/* Stars */}
               <div className="flex items-center gap-0.5">
                 {Array.from({ length: review.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="w-4 h-4 fill-gold text-gold" />
                 ))}
               </div>
 
@@ -74,10 +74,10 @@ export function Reviews() {
 
         {/* Featured In */}
         <div className="mt-12 text-center">
-          <p className="text-gray-400 uppercase tracking-wider text-xs font-body">Featured In</p>
+          <p className="text-white/60 uppercase tracking-wider text-xs font-body">Featured In</p>
           <div className="flex items-center justify-center gap-8 mt-4 flex-wrap">
             {SOCIAL_PROOF.featuredIn.map((pub) => (
-              <span key={pub} className="text-gray-400 font-display text-lg">
+              <span key={pub} className="text-white/70 font-display text-lg">
                 {pub}
               </span>
             ))}
@@ -94,7 +94,7 @@ export function Reviews() {
           >
             Shop Our Coffees
           </a>
-          <p className="text-gray-400 text-sm mt-3 font-body">
+          <p className="text-white/60 text-sm mt-3 font-body">
             Join {SOCIAL_PROOF.customersServed} happy customers
           </p>
         </div>

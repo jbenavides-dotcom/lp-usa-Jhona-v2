@@ -44,7 +44,7 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="bg-cream py-20">
+    <section id="faq" className="bg-amarillo-miel py-20">
       <div className="container mx-auto max-w-3xl px-4">
         <ScrollReveal>
           <div className="text-center mb-12">

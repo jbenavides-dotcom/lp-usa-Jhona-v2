@@ -19,15 +19,15 @@ export function ProductCard({ product }: ProductCardProps) {
   const showFreeShipping = product.price >= 50;
 
   return (
-    <article className="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+    <article className="bg-rosa-blush border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
       {/* Image area */}
-      <div className={`relative ${imageBg} flex items-center justify-center h-96 overflow-hidden group`}>
+      <div className={`relative ${imageBg} flex items-center justify-center h-64 overflow-hidden group`}>
         <img
           src={`${BASE}${product.image}`}
           alt={`${product.name} — ${product.variety} ${product.process} Colombian Specialty Coffee by La Palma & El Tucán`}
           width="400"
-          height="384"
-          className="h-full w-full object-cover scale-110 transition-transform duration-500 group-hover:scale-125"
+          height="256"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
 

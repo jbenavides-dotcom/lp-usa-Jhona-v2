@@ -29,3 +29,40 @@
     @apply text-burgundy uppercase tracking-[0.3em] text-sm font-semibold;
   }
 }
+
+/* Force text visibility on light backgrounds — safety net */
+#sustainability h2,
+#sustainability p,
+#sustainability h3 {
+  color: #2C2D2E !important;
+}
+
+#sustainability .section-subtitle,
+#sustainability p[class*="tracking"] {
+  color: #166534 !important;
+}
+
+#story h2,
+#story p,
+#story span {
+  color: #2C2D2E !important;
+}
+
+#story .section-subtitle {
+  color: #ED728B !important;
+}
+
+#story .font-display.text-3xl {
+  color: #ED728B !important;
+}
+
+#story .text-gold {
+  color: #CB9F5B !important;
+}
+
+#faq h2,
+#faq p,
+#faq button span,
+#faq button {
+  color: #2C2D2E !important;
+}

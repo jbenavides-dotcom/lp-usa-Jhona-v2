@@ -12,6 +12,11 @@ export default {
                             gold: '#CB9F5B',
                             green: '#166534',
                             'warm-white': '#FCF7EC',
+                            'rosa-empaque': '#F7C7C7',
+                            'rosa-blush': '#FFF1F2',
+                            'amarillo-miel': '#FEF9C3',
+                            'verde-finca': '#DCFCE7',
+                            'beige-natural': '#FAF9F5',
                   },
                   fontFamily: {
                             display: ['"Baskervville"', 'serif'],

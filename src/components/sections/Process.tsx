@@ -5,7 +5,8 @@ const BASE = import.meta.env.BASE_URL;
 
 export function Process() {
   return (
-    <section id="process" className="bg-cream/70 py-20">
+    <section id="process" className="bg-cream py-20 relative">
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-rosa-empaque to-cream" />
       <div className="container mx-auto max-w-7xl px-4">
         {/* Header */}
         <div className="text-center mb-14">
@@ -29,14 +30,14 @@ export function Process() {
                 className="rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 {/* Image */}
-                <div className="relative h-56 overflow-hidden">
+                <div className={`relative h-56 overflow-hidden ${step.step === 7 ? 'bg-cream flex items-center justify-center' : ''}`}>
                   <img
                     src={`${BASE}${step.image.replace(/^\//, '')}`}
                     alt={`${step.title} — Step ${step.step} of the coffee production process at La Palma & El Tucán farm, Zipacón Colombia`}
                     loading="lazy"
                     width="400"
                     height="224"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className={`${step.step === 7 ? 'w-full h-full object-contain p-2' : 'w-full h-full object-cover hover:scale-105'} transition-transform duration-500 rounded-t-lg`}
                   />
                   {/* Step number badge */}
                   <div className="absolute top-3 left-3 w-10 h-10 bg-burgundy text-white rounded-full flex items-center justify-center font-bold font-body text-sm">
@@ -56,7 +57,7 @@ export function Process() {
 
         {/* Innovative Processing — closing section */}
         <ScrollReveal delay={200}>
-          <div className="mt-12 grid lg:grid-cols-2 gap-8 items-center">
+          <div className="mt-8 grid lg:grid-cols-2 gap-8 items-center">
             <img
               src={`${BASE}images/proceso/proceso_bio_washed.jpg`}
               alt="Bio-Washed coffee processing at La Palma & El Tucán farm in Zipacón, Colombia"

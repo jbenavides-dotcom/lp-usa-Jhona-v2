@@ -8,6 +8,7 @@ import { Process } from './components/sections/Process';
 import { Story } from './components/sections/Story';
 import { Sustainability } from './components/sections/Sustainability';
 import { Faq } from './components/sections/Faq';
+import { Reviews } from './components/sections/Reviews';
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
         <Hero />
         <TrustBar />
         <Products />
-        <ProducerAdvantage />
         <Process />
-        <Story />
+        <ProducerAdvantage />
         <Sustainability />
+        <Story />
         <Faq />
+        <Reviews />
       </main>
 
       <Footer />
