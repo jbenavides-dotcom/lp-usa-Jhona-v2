@@ -1,8 +1,7 @@
 import { Award, MapPin } from 'lucide-react';
 import { FARM_STATS } from '../../constants/config';
 import { ScrollReveal } from '../ui/ScrollReveal';
-
-const BASE = import.meta.env.BASE_URL;
+import { img } from '../../lib/cloudinary';
 
 const stats = [
   { value: FARM_STATS.founded, label: 'Founded' },
@@ -19,7 +18,7 @@ export function Story() {
           <ScrollReveal delay={0}>
             <div className="relative rounded-xl overflow-hidden">
               <img
-                src={`${BASE}images/sostenibilidad/finca_vista_panoramica.jpg`}
+                src={img('images/sostenibilidad/finca_vista_panoramica.jpg', 'hero')}
                 alt="Panoramic view of La Palma & El Tucán coffee farm in Zipacón, Colombia's cloud forest"
                 loading="lazy"
                 width="600"
@@ -95,7 +94,7 @@ export function Story() {
               {/* Photo gallery */}
               <div className="grid grid-cols-3 gap-3 mt-8">
                 <img
-                  src={`${BASE}images/equipo/equipo_felipe_beneficio.jpg`}
+                  src={img('images/equipo/equipo_felipe_beneficio.jpg', 'thumb')}
                   alt="Felipe Sardi at the coffee processing station at La Palma & El Tucán"
                   loading="lazy"
                   width="200"
@@ -103,7 +102,7 @@ export function Story() {
                   className="rounded-lg h-32 w-full object-cover"
                 />
                 <img
-                  src={`${BASE}images/equipo/equipo_trabajador_cafe.jpg`}
+                  src={img('images/equipo/equipo_trabajador_cafe.jpg', 'thumb')}
                   alt="Farm worker hand-picking ripe coffee cherries during harvest at La Palma & El Tucán"
                   loading="lazy"
                   width="200"
@@ -111,7 +110,7 @@ export function Story() {
                   className="rounded-lg h-32 w-full object-cover"
                 />
                 <img
-                  src={`${BASE}images/proceso/proceso_03_cereza_madura.jpg`}
+                  src={img('images/proceso/proceso_03_cereza_madura.jpg', 'thumb')}
                   alt="Ripe coffee cherries ready for harvest at La Palma & El Tucán"
                   loading="lazy"
                   width="200"

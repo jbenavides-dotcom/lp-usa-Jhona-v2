@@ -1,3 +1,5 @@
+import { img } from '../lib/cloudinary';
+
 export type Tier = 'legendary' | 'heroes' | 'warrior';
 
 export interface Product {
@@ -50,8 +52,8 @@ export const PRODUCTS: Product[] = [
     badge: 'Limited Release',
     tag: 'ULTRA PREMIUM',
     shopifyUrl: 'https://lapalmayeltucan.com/collections/all',
-    image: '/images/productos/legendary-geisha-bag.png',
-    labelImage: '/images/productos/legendary-geisha-label.png',
+    image: img('images/productos/legendary-geisha-bag.png', 'product'),
+    labelImage: img('images/productos/legendary-geisha-label.png', 'product'),
   },
   {
     id: 'geisha-single-origin',
@@ -72,7 +74,7 @@ export const PRODUCTS: Product[] = [
     badge: null,
     tag: 'SINGLE ORIGIN',
     shopifyUrl: 'https://lapalmayeltucan.com/collections/all',
-    image: '/images/productos/geisha-bag.png',
+    image: img('images/productos/geisha-bag.png', 'product'),
     labelImage: null,
   },
   {
@@ -94,8 +96,8 @@ export const PRODUCTS: Product[] = [
     badge: 'Best Seller',
     tag: 'SINGLE ORIGIN',
     shopifyUrl: 'https://lapalmayeltucan.com/collections/all',
-    image: '/images/productos/sidra-bag.png',
-    labelImage: '/images/productos/sidra-label.png',
+    image: img('images/productos/sidra-bag.png', 'product'),
+    labelImage: img('images/productos/sidra-label.png', 'product'),
   },
   {
     id: 'palma-blend',
@@ -116,7 +118,7 @@ export const PRODUCTS: Product[] = [
     badge: null,
     tag: 'EVERYDAY LUXURY',
     shopifyUrl: 'https://lapalmayeltucan.com/collections/all',
-    image: '/images/productos/palma-blend-bag.png',
+    image: img('images/productos/palma-blend-bag.png', 'product'),
     labelImage: null,
   },
   {
@@ -138,8 +140,8 @@ export const PRODUCTS: Product[] = [
     badge: null,
     tag: 'EXOTIC BLEND',
     shopifyUrl: 'https://lapalmayeltucan.com/collections/all',
-    image: '/images/productos/tucan-blend-bag.png',
-    labelImage: '/images/productos/tucan-blend-label.png',
+    image: img('images/productos/tucan-blend-bag.png', 'product'),
+    labelImage: img('images/productos/tucan-blend-label.png', 'product'),
   },
 ];
 

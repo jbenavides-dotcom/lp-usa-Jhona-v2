@@ -1,0 +1,205 @@
+{
+  "images/banners/lineup-clean.png": {
+    "public_id": "lp-usa/banners/lineup-clean",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329686/lp-usa/banners/lineup-clean.png",
+    "width": 1472,
+    "height": 980,
+    "bytes": 490950
+  },
+  "images/banners/lineup-copy.png": {
+    "public_id": "lp-usa/banners/lineup-copy",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329687/lp-usa/banners/lineup-copy.png",
+    "width": 2800,
+    "height": 968,
+    "bytes": 1243089
+  },
+  "images/banners/lineup-detail.jpg": {
+    "public_id": "lp-usa/banners/lineup-detail",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329688/lp-usa/banners/lineup-detail.jpg",
+    "width": 1200,
+    "height": 979,
+    "bytes": 50761
+  },
+  "images/equipo/equipo_elisa_trabajadoras.jpg": {
+    "public_id": "lp-usa/equipo/equipo_elisa_trabajadoras",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329689/lp-usa/equipo/equipo_elisa_trabajadoras.jpg",
+    "width": 4096,
+    "height": 2935,
+    "bytes": 2239954
+  },
+  "images/equipo/equipo_felipe_beneficio.jpg": {
+    "public_id": "lp-usa/equipo/equipo_felipe_beneficio",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329690/lp-usa/equipo/equipo_felipe_beneficio.jpg",
+    "width": 3022,
+    "height": 3022,
+    "bytes": 1972448
+  },
+  "images/equipo/equipo_trabajador_cafe.jpg": {
+    "public_id": "lp-usa/equipo/equipo_trabajador_cafe",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329691/lp-usa/equipo/equipo_trabajador_cafe.jpg",
+    "width": 2475,
+    "height": 2475,
+    "bytes": 1289346
+  },
+  "images/equipo/felipe_caballo_finca.jpg": {
+    "public_id": "lp-usa/equipo/felipe_caballo_finca",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329693/lp-usa/equipo/felipe_caballo_finca.jpg",
+    "width": 4928,
+    "height": 3264,
+    "bytes": 8998484
+  },
+  "images/equipo/fundadores_familia.jpg": {
+    "public_id": "lp-usa/equipo/fundadores_familia",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329694/lp-usa/equipo/fundadores_familia.jpg",
+    "width": 960,
+    "height": 1280,
+    "bytes": 120540
+  },
+  "images/equipo/fundadores_felipe_elisa.jpg": {
+    "public_id": "lp-usa/equipo/fundadores_felipe_elisa",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329696/lp-usa/equipo/fundadores_felipe_elisa.jpg",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 262306
+  },
+  "images/hero/hero-brand.jpg": {
+    "public_id": "lp-usa/hero/hero-brand",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329697/lp-usa/hero/hero-brand.jpg",
+    "width": 1200,
+    "height": 1600,
+    "bytes": 74667
+  },
+  "images/hero/hero-lifestyle.png": {
+    "public_id": "lp-usa/hero/hero-lifestyle",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329698/lp-usa/hero/hero-lifestyle.png",
+    "width": 1200,
+    "height": 1436,
+    "bytes": 1731690
+  },
+  "images/proceso/proceso_01_cultivo_cafetales.jpg": {
+    "public_id": "lp-usa/proceso/proceso_01_cultivo_cafetales",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329698/lp-usa/proceso/proceso_01_cultivo_cafetales.jpg",
+    "width": 3264,
+    "height": 2448,
+    "bytes": 3055078
+  },
+  "images/proceso/proceso_02_vivero_secaderos.jpg": {
+    "public_id": "lp-usa/proceso/proceso_02_vivero_secaderos",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329699/lp-usa/proceso/proceso_02_vivero_secaderos.jpg",
+    "width": 2048,
+    "height": 1356,
+    "bytes": 2106989
+  },
+  "images/proceso/proceso_04_secado_natural.jpg": {
+    "public_id": "lp-usa/proceso/proceso_04_secado_natural",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329701/lp-usa/proceso/proceso_04_secado_natural.jpg",
+    "width": 1080,
+    "height": 1620,
+    "bytes": 860549
+  },
+  "images/productos/geisha-bag.png": {
+    "public_id": "lp-usa/productos/geisha-bag",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329706/lp-usa/productos/geisha-bag.png",
+    "width": 1235,
+    "height": 1238,
+    "bytes": 376259
+  },
+  "images/productos/legendary-geisha-bag.png": {
+    "public_id": "lp-usa/productos/legendary-geisha-bag",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329707/lp-usa/productos/legendary-geisha-bag.png",
+    "width": 1235,
+    "height": 1238,
+    "bytes": 410230
+  },
+  "images/productos/legendary-geisha-label.png": {
+    "public_id": "lp-usa/productos/legendary-geisha-label",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329708/lp-usa/productos/legendary-geisha-label.png",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 157791
+  },
+  "images/productos/palma-blend-bag.png": {
+    "public_id": "lp-usa/productos/palma-blend-bag",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329709/lp-usa/productos/palma-blend-bag.png",
+    "width": 1235,
+    "height": 1238,
+    "bytes": 763430
+  },
+  "images/productos/sidra-bag.png": {
+    "public_id": "lp-usa/productos/sidra-bag",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329710/lp-usa/productos/sidra-bag.png",
+    "width": 1235,
+    "height": 1238,
+    "bytes": 621960
+  },
+  "images/productos/sidra-label.png": {
+    "public_id": "lp-usa/productos/sidra-label",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329713/lp-usa/productos/sidra-label.png",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 40880
+  },
+  "images/productos/tucan-blend-bag.png": {
+    "public_id": "lp-usa/productos/tucan-blend-bag",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329713/lp-usa/productos/tucan-blend-bag.png",
+    "width": 1235,
+    "height": 1238,
+    "bytes": 718672
+  },
+  "images/productos/tucan-blend-label.png": {
+    "public_id": "lp-usa/productos/tucan-blend-label",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329714/lp-usa/productos/tucan-blend-label.png",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 62188
+  },
+  "images/sostenibilidad/biodiversidad_ganado.jpg": {
+    "public_id": "lp-usa/sostenibilidad/biodiversidad_ganado",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329715/lp-usa/sostenibilidad/biodiversidad_ganado.jpg",
+    "width": 480,
+    "height": 640,
+    "bytes": 235608
+  },
+  "images/sostenibilidad/finca_vista_panoramica.jpg": {
+    "public_id": "lp-usa/sostenibilidad/finca_vista_panoramica",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329717/lp-usa/sostenibilidad/finca_vista_panoramica.jpg",
+    "width": 4928,
+    "height": 3264,
+    "bytes": 8265493
+  },
+  "images/tostadora/stronghold_s8x_frontal.jpg": {
+    "public_id": "lp-usa/tostadora/stronghold_s8x_frontal",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329719/lp-usa/tostadora/stronghold_s8x_frontal.jpg",
+    "width": 3048,
+    "height": 4064,
+    "bytes": 3872534
+  },
+  "images/tostadora/stronghold_s8x_frontal_alt.jpg": {
+    "public_id": "lp-usa/tostadora/stronghold_s8x_frontal_alt",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329720/lp-usa/tostadora/stronghold_s8x_frontal_alt.jpg",
+    "width": 3048,
+    "height": 4064,
+    "bytes": 3520990
+  },
+  "images/tostadora/stronghold_s8x_frontal_clean.jpg": {
+    "public_id": "lp-usa/tostadora/stronghold_s8x_frontal_clean",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329721/lp-usa/tostadora/stronghold_s8x_frontal_clean.png",
+    "width": 896,
+    "height": 1195,
+    "bytes": 1217113
+  },
+  "images/tostadora/stronghold_s8x_lateral.jpg": {
+    "public_id": "lp-usa/tostadora/stronghold_s8x_lateral",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329722/lp-usa/tostadora/stronghold_s8x_lateral.jpg",
+    "width": 3048,
+    "height": 4064,
+    "bytes": 3310154
+  },
+  "images/tostadora/tostadora_nueva.jpg": {
+    "public_id": "lp-usa/tostadora/tostadora_nueva",
+    "url": "https://res.cloudinary.com/dkqocgknd/image/upload/v1773329723/lp-usa/tostadora/tostadora_nueva.jpg",
+    "width": 899,
+    "height": 1599,
+    "bytes": 102834
+  }
+}

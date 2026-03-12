@@ -1,6 +1,5 @@
 import { ScrollReveal } from '../ui/ScrollReveal';
-
-const BASE = import.meta.env.BASE_URL;
+import { img } from '../../lib/cloudinary';
 
 const advantages = [
   { number: '01', title: 'Roast Design from Terroir' },
@@ -74,7 +73,7 @@ export function ProducerAdvantage() {
           <ScrollReveal delay={150}>
             {/* Main image */}
             <img
-              src={`${BASE}images/tostadora/tostadora_nueva.jpg`}
+              src={img('images/tostadora/tostadora_nueva.jpg', 'medium')}
               alt="Stronghold S8X coffee roaster at La Palma & El Tucán farm in Zipacón, Colombia"
               loading="lazy"
               width="600"
@@ -85,7 +84,7 @@ export function ProducerAdvantage() {
             {/* Two smaller images below */}
             <div className="grid grid-cols-2 gap-3 mt-3">
               <img
-                src={`${BASE}images/proceso/proceso_04_secado_natural.jpg`}
+                src={img('images/proceso/proceso_04_secado_natural.jpg', 'thumb')}
                 alt="Coffee beans drying on African raised beds at La Palma & El Tucán farm in Zipacón, Colombia"
                 loading="lazy"
                 width="300"
@@ -93,7 +92,7 @@ export function ProducerAdvantage() {
                 className="rounded-lg h-40 object-cover w-full"
               />
               <img
-                src={`${BASE}images/proceso/proceso_03_cereza_madura.jpg`}
+                src={img('images/proceso/proceso_03_cereza_madura.jpg', 'thumb')}
                 alt="Ripe red coffee cherries ready for harvest at La Palma & El Tucán"
                 loading="lazy"
                 width="300"

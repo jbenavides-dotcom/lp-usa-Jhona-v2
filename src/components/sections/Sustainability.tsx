@@ -2,8 +2,7 @@ import { TreePine, Bird, Leaf, Users } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { SUSTAINABILITY_STATS } from '../../constants/config';
 import { ScrollReveal } from '../ui/ScrollReveal';
-
-const BASE = import.meta.env.BASE_URL;
+import { img } from '../../lib/cloudinary';
 
 const ICON_MAP: Record<string, LucideIcon> = {
   TreePine,
@@ -73,7 +72,7 @@ export function Sustainability() {
 
               {/* Biodiversity image */}
               <img
-                src={`${BASE}images/sostenibilidad/biodiversidad_ganado.jpg`}
+                src={img('images/sostenibilidad/biodiversidad_ganado.jpg', 'medium')}
                 alt="Cattle grazing among native trees as part of the regenerative agriculture system at La Palma & El Tucán"
                 loading="lazy"
                 width="600"
@@ -87,7 +86,7 @@ export function Sustainability() {
           <ScrollReveal delay={150}>
             <div className="rounded-xl overflow-hidden min-h-[400px]">
               <img
-                src={`${BASE}images/sostenibilidad/finca_vista_panoramica.jpg`}
+                src={img('images/sostenibilidad/finca_vista_panoramica.jpg', 'hero')}
                 alt="Panoramic view of La Palma & El Tucán coffee farm in the cloud forest of Zipacón, Colombia"
                 loading="lazy"
                 width="600"

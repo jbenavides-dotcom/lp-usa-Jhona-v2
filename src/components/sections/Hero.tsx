@@ -1,7 +1,6 @@
 import { Clock, Award, ChevronDown } from 'lucide-react';
 import { SHOPIFY_COLLECTIONS } from '../../constants/config';
-
-const BASE = import.meta.env.BASE_URL;
+import { img } from '../../lib/cloudinary';
 
 export function Hero() {
   return (
@@ -12,7 +11,7 @@ export function Hero() {
       {/* Background image + dark overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${BASE}images/hero/hero-lifestyle.png)` }}
+        style={{ backgroundImage: `url(${img('images/hero/hero-lifestyle.png', 'hero')})` }}
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-black/70" aria-hidden="true" />

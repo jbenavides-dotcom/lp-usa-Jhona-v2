@@ -1,7 +1,6 @@
 import { PROCESS_STEPS } from '../../constants/process';
 import { ScrollReveal } from '../ui/ScrollReveal';
-
-const BASE = import.meta.env.BASE_URL;
+import { img } from '../../lib/cloudinary';
 
 export function Process() {
   return (
@@ -23,16 +22,16 @@ export function Process() {
 
         {/* Steps grid */}
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {PROCESS_STEPS.map((step) => (
               <div
                 key={step.step}
                 className="rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 {/* Image */}
-                <div className={`relative h-56 overflow-hidden ${step.step === 7 ? 'bg-cream flex items-center justify-center' : ''}`}>
+                <div className={`relative h-56 overflow-hidden ${step.step === 7 ? 'bg-beige-natural flex items-center justify-center' : ''}`}>
                   <img
-                    src={`${BASE}${step.image.replace(/^\//, '')}`}
+                    src={step.image}
                     alt={`${step.title} — Step ${step.step} of the coffee production process at La Palma & El Tucán farm, Zipacón Colombia`}
                     loading="lazy"
                     width="400"
@@ -48,7 +47,7 @@ export function Process() {
                 {/* Text */}
                 <div className="p-6">
                   <h3 className="font-display text-lg font-bold text-dark">{step.title}</h3>
-                  <p className="text-gold font-body text-sm mt-2">{step.description}</p>
+                  <p className="text-gray-600 font-body text-sm mt-2">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -59,7 +58,7 @@ export function Process() {
         <ScrollReveal delay={200}>
           <div className="mt-8 grid lg:grid-cols-2 gap-8 items-center">
             <img
-              src={`${BASE}images/proceso/proceso_bio_washed.jpg`}
+              src={img('images/proceso/proceso_bio_washed.jpg', 'medium')}
               alt="Bio-Washed coffee processing at La Palma & El Tucán farm in Zipacón, Colombia"
               loading="lazy"
               width="600"

@@ -12,8 +12,6 @@ const IMAGE_BG: Record<string, string> = {
 };
 
 export function ProductCard({ product }: ProductCardProps) {
-  const BASE = import.meta.env.BASE_URL;
-
   const imageBg = IMAGE_BG[product.tier] ?? 'bg-stone-50';
   const showStockWarning = product.stock < 50;
   const showFreeShipping = product.price >= 50;
@@ -23,7 +21,7 @@ export function ProductCard({ product }: ProductCardProps) {
       {/* Image area */}
       <div className={`relative ${imageBg} flex items-center justify-center h-64 overflow-hidden group`}>
         <img
-          src={`${BASE}${product.image}`}
+          src={product.image}
           alt={`${product.name} — ${product.variety} ${product.process} Colombian Specialty Coffee by La Palma & El Tucán`}
           width="400"
           height="256"
