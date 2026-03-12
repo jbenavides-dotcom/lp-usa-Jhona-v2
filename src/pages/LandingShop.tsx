@@ -155,6 +155,9 @@ function TrustBadgesSection() {
             </li>
           ))}
         </ul>
+        <p className="text-center text-dark/50 text-xs mt-3 font-body">
+          Over 10,000 specialty coffee orders shipped to the US since 2020. Average SCA score across all offerings: 86–90+.
+        </p>
       </div>
     </section>
   );
@@ -306,8 +309,31 @@ function UrgencySection() {
 
 export function LandingShop() {
   useEffect(() => {
-    document.title =
-      'Buy Colombian Specialty Coffee | Geisha, Sidra & Blends — La Palma & El Tucán';
+    document.title = 'Buy Colombian Specialty Coffee | Geisha, Sidra & Blends — La Palma & El Tucán';
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', 'Shop Colombian specialty coffee from $42. Legendary Geisha, Sidra Natural & signature blends — roasted at origin, shipped free to the US. SCA scores 86-90+.');
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', 'https://jbenavides-dotcom.github.io/lp-usa-Jhona-v2/shop');
+
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', 'https://jbenavides-dotcom.github.io/lp-usa-Jhona-v2/shop');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', 'Buy Colombian Specialty Coffee | Geisha, Sidra & Blends — La Palma & El Tucán');
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', 'Shop Colombian specialty coffee from $42. Legendary Geisha, Sidra Natural & signature blends — roasted at origin, shipped free to the US. SCA scores 86-90+.');
+
+    let keywords = document.querySelector('meta[name="keywords"]');
+    if (!keywords) {
+      keywords = document.createElement('meta');
+      keywords.setAttribute('name', 'keywords');
+      document.head.appendChild(keywords);
+    }
+    keywords.setAttribute('content', 'buy colombian coffee online, specialty coffee subscription, geisha coffee for sale, sidra coffee, free shipping coffee US');
+
+    const hreflangEn = document.querySelector('link[hreflang="en-us"]');
+    if (hreflangEn) hreflangEn.setAttribute('href', 'https://jbenavides-dotcom.github.io/lp-usa-Jhona-v2/shop');
   }, []);
 
   return (
@@ -318,6 +344,31 @@ export function LandingShop() {
         <ProductGridSection />
         <UrgencySection />
       </main>
+
+      {/* Internal Links + EEAT */}
+      <section className="bg-cream py-12 px-4">
+        <div className="max-w-3xl mx-auto text-center space-y-6">
+          <p className="text-dark/60 font-body text-sm">
+            Explore more from La Palma & El Tucán
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/lp-usa-Jhona-v2/story" className="text-burgundy font-semibold text-sm hover:underline">
+              Discover Our Story →
+            </a>
+            <span className="text-dark/20">|</span>
+            <a href="/lp-usa-Jhona-v2/geisha-coffee" className="text-burgundy font-semibold text-sm hover:underline">
+              What Makes Geisha Special? →
+            </a>
+          </div>
+          <div className="pt-4 border-t border-dark/10">
+            <p className="text-dark/50 text-xs leading-relaxed">
+              Roasted and shipped directly by La Palma & El Tucán — producer-roasters since 2012.<br />
+              Winner: World Barista Championship 2019 · SCA Score 86–90+ · Rainforest Alliance Certified
+            </p>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );

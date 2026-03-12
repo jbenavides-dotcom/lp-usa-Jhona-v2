@@ -151,6 +151,35 @@ function ProductCardItem({ card }: { card: ProductCard }) {
 export function LandingStory() {
   useEffect(() => {
     document.title = 'La Palma & El Tucán | Colombian Specialty Coffee — Farm to Cup';
+
+    // Meta description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', 'Discover how La Palma & El Tucán grows world-class Geisha coffee at 1,800m in Colombia\'s cloud forest. From farm to cup — order specialty coffee roasted at origin.');
+
+    // Canonical
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', 'https://jbenavides-dotcom.github.io/lp-usa-Jhona-v2/story');
+
+    // OG tags
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', 'https://jbenavides-dotcom.github.io/lp-usa-Jhona-v2/story');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', 'La Palma & El Tucán | Colombian Specialty Coffee — Farm to Cup');
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', 'Discover how La Palma & El Tucán grows world-class Geisha coffee at 1,800m in Colombia\'s cloud forest. From farm to cup — order specialty coffee roasted at origin.');
+
+    // Keywords
+    let keywords = document.querySelector('meta[name="keywords"]');
+    if (!keywords) {
+      keywords = document.createElement('meta');
+      keywords.setAttribute('name', 'keywords');
+      document.head.appendChild(keywords);
+    }
+    keywords.setAttribute('content', 'colombian specialty coffee, farm to cup coffee, la palma el tucan, cloud forest coffee, geisha coffee colombia, origin roasted coffee');
+
+    // Hreflang
+    const hreflangEn = document.querySelector('link[hreflang="en-us"]');
+    if (hreflangEn) hreflangEn.setAttribute('href', 'https://jbenavides-dotcom.github.io/lp-usa-Jhona-v2/story');
   }, []);
 
   const handleScrollToOrigin = () => {
@@ -291,6 +320,9 @@ export function LandingStory() {
                 we share what we've learned with over 200 neighboring farming families — bringing
                 organic practices, financial literacy, and specialty-grade processing to an
                 entire community. A cup of our coffee is a vote for that community's future.
+              </p>
+              <p className="text-dark font-semibold text-sm mt-4 bg-amarillo-miel/30 px-4 py-3 rounded-lg">
+                Founded in 2012, La Palma & El Tucán manages 40 hectares of specialty coffee across multiple microlots in Colombia's Western Andes. The farm's terroir — cloud forest conditions, volcanic soil, and 1,800m elevation — creates natural conditions for complex flavor development.
               </p>
             </div>
           </div>
@@ -625,6 +657,32 @@ export function LandingStory() {
 
           {/* Decorative line */}
           <div className="w-12 h-px bg-white/40 mt-2" />
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════
+          INTERNAL LINKS + EEAT
+      ═══════════════════════════════════════════════════ */}
+      <section className="bg-cream py-12 px-4">
+        <div className="max-w-3xl mx-auto text-center space-y-6">
+          <p className="text-dark/60 font-body text-sm">
+            Explore more from La Palma & El Tucán
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/lp-usa-Jhona-v2/geisha-coffee" className="text-burgundy font-semibold text-sm hover:underline">
+              What Makes Geisha Special? →
+            </a>
+            <span className="text-dark/20">|</span>
+            <a href="/lp-usa-Jhona-v2/shop" className="text-burgundy font-semibold text-sm hover:underline">
+              Shop All Coffees →
+            </a>
+          </div>
+          <div className="pt-4 border-t border-dark/10">
+            <p className="text-dark/50 text-xs leading-relaxed">
+              Roasted and shipped directly by La Palma & El Tucán — producer-roasters since 2012.<br />
+              Winner: World Barista Championship 2019 · SCA Score 86–90+ · Rainforest Alliance Certified
+            </p>
+          </div>
         </div>
       </section>
 

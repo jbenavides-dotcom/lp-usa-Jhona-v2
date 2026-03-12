@@ -219,9 +219,15 @@ function buildProductSchema() {
     name: `${p.name} — Colombian Specialty Coffee`,
     description: p.description,
     image: p.image,
-    brand: {
-      '@type': 'Brand',
+    brand: { '@type': 'Brand', name: 'La Palma & El Tucán' },
+    category: 'Specialty Coffee',
+    weight: { '@type': 'QuantitativeValue', value: '340', unitCode: 'GRM' },
+    countryOfOrigin: { '@type': 'Country', name: 'Colombia' },
+    manufacturer: {
+      '@type': 'Organization',
       name: 'La Palma & El Tucán',
+      url: 'https://www.lapalmayeltucan.com',
+      address: { '@type': 'PostalAddress', addressLocality: 'Zipacón', addressRegion: 'Cundinamarca', addressCountry: 'CO' },
     },
     offers: {
       '@type': 'Offer',
@@ -229,17 +235,34 @@ function buildProductSchema() {
       price: p.price.toFixed(2),
       availability: 'https://schema.org/InStock',
       url: p.shopifyUrl,
-      seller: {
-        '@type': 'Organization',
-        name: 'La Palma & El Tucán',
+      seller: { '@type': 'Organization', name: 'La Palma & El Tucán' },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'USD' },
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'US' },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 3, unitCode: 'DAY' },
+          transitTime: { '@type': 'QuantitativeValue', minValue: 3, maxValue: 7, unitCode: 'DAY' },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'US',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn',
       },
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: p.scaScore.replace('+', ''),
-      reviewCount: '1',
-      bestRating: '100',
-    },
+    additionalProperty: [
+      { '@type': 'PropertyValue', name: 'Origin', value: 'Zipacón, Cundinamarca, Colombia' },
+      { '@type': 'PropertyValue', name: 'Elevation', value: p.altitude },
+      { '@type': 'PropertyValue', name: 'Varietal', value: p.name.includes('Blend') ? 'Blend' : p.name.replace('LEGENDARY ', '').replace(' Single Origin', '') },
+      { '@type': 'PropertyValue', name: 'Process', value: p.process },
+      { '@type': 'PropertyValue', name: 'SCA Score', value: p.scaScore },
+      { '@type': 'PropertyValue', name: 'Tasting Notes', value: p.tastingNotes },
+    ],
   }));
 }
 
@@ -255,6 +278,63 @@ function buildFaqSchema() {
         text: item.answer,
       },
     })),
+  };
+}
+
+function buildArticleSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: "Geisha Coffee: The Complete Guide to the World's Most Extraordinary Coffee",
+    description: "Learn about Geisha coffee — its origins in Ethiopia, why Colombia's cloud forest is ideal for growing it, tasting notes, brewing methods, and where to buy authentic Colombian Geisha online.",
+    author: { '@type': 'Organization', name: 'La Palma & El Tucán', url: 'https://www.lapalmayeltucan.com' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'La Palma & El Tucán',
+      logo: { '@type': 'ImageObject', url: 'https://res.cloudinary.com/dkqocgknd/image/upload/f_auto,q_auto/lp-usa/logo' },
+    },
+    datePublished: '2026-03-01',
+    dateModified: '2026-03-12',
+    mainEntityOfPage: 'https://jbenavides-dotcom.github.io/lp-usa-Jhona-v2/geisha-coffee',
+    image: 'https://res.cloudinary.com/dkqocgknd/image/upload/f_auto,q_auto,w_1400/lp-usa/sostenibilidad/finca_vista_panoramica',
+    keywords: ['geisha coffee', 'colombian geisha', 'specialty coffee', 'buy geisha coffee online', 'la palma el tucan'],
+  };
+}
+
+function buildHowToSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Brew Geisha Coffee at Home',
+    description: 'Learn three methods to brew Colombian Geisha coffee at home: pour over, French press, and AeroPress.',
+    totalTime: 'PT5M',
+    supply: [
+      { '@type': 'HowToSupply', name: 'Geisha coffee beans (freshly ground)' },
+      { '@type': 'HowToSupply', name: 'Filtered water (TDS 120-150 ppm)' },
+    ],
+    tool: [
+      { '@type': 'HowToTool', name: 'Pour over dripper (Hario V60 or Chemex)' },
+      { '@type': 'HowToTool', name: 'Coffee grinder' },
+      { '@type': 'HowToTool', name: 'Scale' },
+      { '@type': 'HowToTool', name: 'Gooseneck kettle' },
+    ],
+    step: [
+      { '@type': 'HowToStep', name: 'Grind the coffee', text: 'Grind fresh Geisha beans immediately before brewing. Use a medium-fine grind for pour over. Pre-ground Geisha loses 60% of its aroma within 15 minutes.' },
+      { '@type': 'HowToStep', name: 'Heat water', text: 'Heat filtered water to 200°F (93°C). Always use filtered water — chlorine and minerals in tap water mute the delicate aromatics.' },
+      { '@type': 'HowToStep', name: 'Bloom and pour', text: 'Bloom for 30 seconds with twice the coffee weight in water, then pour in slow concentric circles. Total brew time: 3-4 minutes.' },
+    ],
+  };
+}
+
+function buildSpeakableSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Geisha Coffee Guide',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['section.bg-cream h1', 'section.bg-white h2', 'section.bg-verde-finca h2'],
+    },
   };
 }
 
@@ -375,10 +455,33 @@ function FaqAccordion({ items }: { items: FaqItem[] }) {
 // ---------------------------------------------------------------------------
 
 export function LandingSeo() {
-  // Document title
+  // Document title + meta tags
   useEffect(() => {
-    document.title =
-      'Geisha Coffee | Buy Colombian Geisha Coffee Online — La Palma & El Tucán';
+    document.title = 'Geisha Coffee | Buy Colombian Geisha Coffee Online — La Palma & El Tucán';
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', "What is Geisha coffee? Learn about the world's most prized variety, grown at our award-winning Colombian farm. Buy authentic Geisha coffee online — from $85.");
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', 'https://jbenavides-dotcom.github.io/lp-usa-Jhona-v2/geisha-coffee');
+
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', 'https://jbenavides-dotcom.github.io/lp-usa-Jhona-v2/geisha-coffee');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', 'Geisha Coffee | Buy Colombian Geisha Coffee Online — La Palma & El Tucán');
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', "What is Geisha coffee? Learn about the world's most prized variety, grown at our award-winning Colombian farm. Buy authentic Geisha coffee online — from $85.");
+
+    let keywords = document.querySelector('meta[name="keywords"]');
+    if (!keywords) {
+      keywords = document.createElement('meta');
+      keywords.setAttribute('name', 'keywords');
+      document.head.appendChild(keywords);
+    }
+    keywords.setAttribute('content', 'what is geisha coffee, buy geisha coffee online, colombian geisha, how to brew geisha, best geisha coffee, specialty coffee guide');
+
+    const hreflangEn = document.querySelector('link[hreflang="en-us"]');
+    if (hreflangEn) hreflangEn.setAttribute('href', 'https://jbenavides-dotcom.github.io/lp-usa-Jhona-v2/geisha-coffee');
   }, []);
 
   // Inject structured data (Product + FAQ schema)
@@ -405,6 +508,30 @@ export function LandingSeo() {
     faqScript.setAttribute('data-schema', 'faq-lp-seo');
     document.head.appendChild(faqScript);
     scriptElements.push(faqScript);
+
+    // Article schema
+    const articleScript = document.createElement('script');
+    articleScript.type = 'application/ld+json';
+    articleScript.textContent = JSON.stringify(buildArticleSchema());
+    articleScript.setAttribute('data-schema', 'article-lp-seo');
+    document.head.appendChild(articleScript);
+    scriptElements.push(articleScript);
+
+    // HowTo schema
+    const howToScript = document.createElement('script');
+    howToScript.type = 'application/ld+json';
+    howToScript.textContent = JSON.stringify(buildHowToSchema());
+    howToScript.setAttribute('data-schema', 'howto-lp-seo');
+    document.head.appendChild(howToScript);
+    scriptElements.push(howToScript);
+
+    // Speakable schema
+    const speakableScript = document.createElement('script');
+    speakableScript.type = 'application/ld+json';
+    speakableScript.textContent = JSON.stringify(buildSpeakableSchema());
+    speakableScript.setAttribute('data-schema', 'speakable-lp-seo');
+    document.head.appendChild(speakableScript);
+    scriptElements.push(speakableScript);
 
     // Cleanup on unmount
     return () => {
@@ -535,6 +662,9 @@ export function LandingSeo() {
                   level in a cloud forest microclimate — provides precisely these conditions,
                   which is why our Geisha expresses its varietal character with such
                   exceptional intensity.
+                </p>
+                <p className="text-dark font-semibold text-sm mt-2 bg-amarillo-miel/30 px-4 py-3 rounded-lg">
+                  La Palma & El Tucán's Geisha coffee is grown at 1,800 meters (5,900 feet) above sea level in Zipacón, Cundinamarca — one of only 12 farms in Colombia certified to produce championship-grade Geisha. Our Geisha scored 90.5 points on the SCA scale and was used by the winner of the 2019 World Barista Championship.
                 </p>
               </div>
             </div>
@@ -815,6 +945,31 @@ export function LandingSeo() {
             <span>Secure Checkout</span>
             <span className="text-white/30">|</span>
             <span>100% Satisfaction Guarantee</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Links + EEAT + Last Updated */}
+      <section className="bg-cream py-12 px-4">
+        <div className="max-w-3xl mx-auto text-center space-y-6">
+          <p className="text-dark/60 font-body text-sm">
+            Explore more from La Palma & El Tucán
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/lp-usa-Jhona-v2/story" className="text-burgundy font-semibold text-sm hover:underline">
+              Our Farm Story →
+            </a>
+            <span className="text-dark/20">|</span>
+            <a href="/lp-usa-Jhona-v2/shop" className="text-burgundy font-semibold text-sm hover:underline">
+              View All Products →
+            </a>
+          </div>
+          <div className="pt-4 border-t border-dark/10">
+            <p className="text-dark/50 text-xs leading-relaxed">
+              Roasted and shipped directly by La Palma & El Tucán — producer-roasters since 2012.<br />
+              Winner: World Barista Championship 2019 · SCA Score 86–90+ · Rainforest Alliance Certified
+            </p>
+            <p className="text-dark/40 text-xs mt-2">Last updated: March 2026</p>
           </div>
         </div>
       </section>
