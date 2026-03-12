@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { Hero } from './components/sections/Hero';
@@ -9,12 +10,15 @@ import { Story } from './components/sections/Story';
 import { Sustainability } from './components/sections/Sustainability';
 import { Faq } from './components/sections/Faq';
 import { Reviews } from './components/sections/Reviews';
+import { LandingStory } from './pages/LandingStory';
+import { LandingShop } from './pages/LandingShop';
+import { LandingSeo } from './pages/LandingSeo';
+import { StickyShopBar } from './components/shared/StickyShopBar';
 
-function App() {
+function HomePage() {
   return (
     <>
       <Header />
-
       <main>
         <Hero />
         <TrustBar />
@@ -26,8 +30,21 @@ function App() {
         <Faq />
         <Reviews />
       </main>
-
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/story" element={<LandingStory />} />
+        <Route path="/shop" element={<LandingShop />} />
+        <Route path="/geisha-coffee" element={<LandingSeo />} />
+      </Routes>
+      <StickyShopBar />
     </>
   );
 }

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jbenavides-dotcom.github.io/lp-usa-Jhona/sitemap.xml
+Sitemap: https://jbenavides-dotcom.github.io/lp-usa-Jhona-v2/sitemap.xml
